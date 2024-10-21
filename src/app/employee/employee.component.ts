@@ -15,6 +15,7 @@ export class EmployeeComponent {
   private builder: FormBuilder = inject(FormBuilder);
   private employeeService: EmployeeService = inject(EmployeeService);
   private router: Router = inject(Router);
+  public id?: string | null;
   employeeForm = this.builder.group({
     name: ['', Validators.required],
     dateOfBirth: ['', Validators.required],
